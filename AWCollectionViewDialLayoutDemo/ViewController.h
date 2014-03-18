@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UICollectionViewDataSource>
+@interface ViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *editBtn;
 @property NSArray *items;
 @end
