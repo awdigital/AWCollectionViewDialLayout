@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AWCollectionViewDialLayout : UICollectionViewLayout
+@interface AWCollectionViewDialLayout : UICollectionViewFlowLayout
 
 typedef enum WheelAlignmentType : NSInteger WheelAlignmentType;
 enum WheelAlignmentType : NSInteger {
@@ -32,4 +32,5 @@ enum WheelAlignmentType : NSInteger {
 
 
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOffset;
+-(void)setShoulSnap:(BOOL)value;
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		716026501B302A750066AFA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7160264F1B302A750066AFA8 /* Images.xcassets */; };
+		716026521B302B240066AFA8 /* splash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716026511B302B240066AFA8 /* splash.xib */; };
+		716026541B302B4B0066AFA8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 716026531B302B4B0066AFA8 /* logo.png */; };
 		71D04A0818D3068F0077B38B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0718D3068F0077B38B /* Foundation.framework */; };
 		71D04A0A18D3068F0077B38B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0918D3068F0077B38B /* CoreGraphics.framework */; };
 		71D04A0C18D3068F0077B38B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0B18D3068F0077B38B /* UIKit.framework */; };
@@ -16,7 +19,6 @@
 		71D04A1B18D3068F0077B38B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A1918D3068F0077B38B /* Main_iPhone.storyboard */; };
 		71D04A1E18D3068F0077B38B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A1C18D3068F0077B38B /* Main_iPad.storyboard */; };
 		71D04A2118D3068F0077B38B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A2018D3068F0077B38B /* ViewController.m */; };
-		71D04A2318D3068F0077B38B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A2218D3068F0077B38B /* Images.xcassets */; };
 		71D04A2A18D3068F0077B38B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A2918D3068F0077B38B /* XCTest.framework */; };
 		71D04A2B18D3068F0077B38B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0718D3068F0077B38B /* Foundation.framework */; };
 		71D04A2C18D3068F0077B38B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0B18D3068F0077B38B /* UIKit.framework */; };
@@ -49,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7160264F1B302A750066AFA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		716026511B302B240066AFA8 /* splash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = splash.xib; sourceTree = "<group>"; };
+		716026531B302B4B0066AFA8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		71D04A0418D3068F0077B38B /* AWCollectionViewDialLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWCollectionViewDialLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D04A0718D3068F0077B38B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71D04A0918D3068F0077B38B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +68,6 @@
 		71D04A1D18D3068F0077B38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		71D04A1F18D3068F0077B38B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		71D04A2018D3068F0077B38B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		71D04A2218D3068F0077B38B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71D04A2818D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWCollectionViewDialLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D04A2918D3068F0077B38B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		71D04A3118D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AWCollectionViewDialLayoutDemoTests-Info.plist"; sourceTree = "<group>"; };
@@ -154,9 +158,9 @@
 				71D04A4318D309C40077B38B /* dialCell.xib */,
 				71DD223818D879A1005450FA /* dialCell2.xib */,
 				71D04A4518D311190077B38B /* players.json */,
-				71D04A2218D3068F0077B38B /* Images.xcassets */,
 				71D04A0E18D3068F0077B38B /* Supporting Files */,
 				71DD0C6318D3540400152D0C /* iphone_settings_view.xib */,
+				7160264F1B302A750066AFA8 /* Images.xcassets */,
 			);
 			path = AWCollectionViewDialLayoutDemo;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 				71D04A1018D3068F0077B38B /* InfoPlist.strings */,
 				71D04A1318D3068F0077B38B /* main.m */,
 				71D04A1518D3068F0077B38B /* AWCollectionViewDialLayoutDemo-Prefix.pch */,
+				716026511B302B240066AFA8 /* splash.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				71D04A4A18D3114C0077B38B /* kyrie_irving.png */,
 				71D04A4B18D3114C0077B38B /* lebron_james.png */,
 				71D04A4C18D3114C0077B38B /* paul_george.png */,
+				716026531B302B4B0066AFA8 /* logo.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -262,6 +268,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Antoine Wette";
 				TargetAttributes = {
+					71D04A0318D3068F0077B38B = {
+						DevelopmentTeam = XVUW2WS7ME;
+					};
 					71D04A2718D3068F0077B38B = {
 						TestTargetID = 71D04A0318D3068F0077B38B;
 					};
@@ -299,10 +308,12 @@
 				71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */,
 				71D04A5018D3114C0077B38B /* lebron_james.png in Resources */,
 				71D04A5318D315980077B38B /* james_harden.png in Resources */,
+				716026521B302B240066AFA8 /* splash.xib in Resources */,
 				71D04A4418D309C40077B38B /* dialCell.xib in Resources */,
 				71D04A4E18D3114C0077B38B /* dwayne_wade.png in Resources */,
 				71D04A4618D311190077B38B /* players.json in Resources */,
-				71D04A2318D3068F0077B38B /* Images.xcassets in Resources */,
+				716026541B302B4B0066AFA8 /* logo.png in Resources */,
+				716026501B302A750066AFA8 /* Images.xcassets in Resources */,
 				71DD223918D879A1005450FA /* dialCell2.xib in Resources */,
 				71DD223C18D885F3005450FA /* awcollectionviewdiallayout_1.jpg in Resources */,
 				71D04A1B18D3068F0077B38B /* Main_iPhone.storyboard in Resources */,
@@ -463,14 +474,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Prefix.pch";
 				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8DBF5CA6-CBFA-4E96-9295-BB7E04FE7D63";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -480,14 +491,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Prefix.pch";
 				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8DBF5CA6-CBFA-4E96-9295-BB7E04FE7D63";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

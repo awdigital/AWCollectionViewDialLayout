@@ -11,7 +11,10 @@
 
 #import "AWCollectionViewDialLayout.h"
 
-@implementation AWCollectionViewDialLayout
+@implementation AWCollectionViewDialLayout{
+    BOOL shouldSnap;
+    CGPoint lastVelocity;
+}
 
 
 
@@ -20,6 +23,7 @@
     if ((self = [super init]) != NULL)
     {
 		[self setup];
+        shouldSnap = NO;
     }
     return self;
 }
@@ -27,16 +31,31 @@
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOff{
     if ((self = [super init]) != NULL)
     {
-        self.dialRadius = radius;//420.0f;
-        self.cellSize = cell;//(CGSize){ 220.0f, 80.0f };
+        self.dialRadius = radius;
+        self.cellSize = cell;
+        self.itemSize = cell;
+        self.minimumInteritemSpacing = 0;
+        self.minimumLineSpacing = 0;
         self.itemHeight = height;
-        self.AngularSpacing = spacing;//8.0f;
+        self.AngularSpacing = spacing;
         self.xOffset = xOff;
         self.wheelType = alignment;
+        self.minimumInteritemSpacing = 0;
+        self.minimumLineSpacing = 0;
+        
+        self.sectionInset = UIEdgeInsetsZero;
+        self.scrollDirection = UICollectionViewScrollDirectionVertical;
+        
+        
         [self setup];
     }
     return self;
 }
+
+-(void)setShoulSnap:(BOOL)value{
+    shouldSnap = value;
+}
+
 
 - (void)setup
 {
@@ -46,11 +65,10 @@
 - (void)prepareLayout
 {
     [super prepareLayout];
-
-    self.cellCount = (int)[self.collectionView numberOfItemsInSection:0];
+    self.cellCount = (self.collectionView.numberOfSections > 0)? (int)[self.collectionView numberOfItemsInSection:0] : 0;
     self.offset = -self.collectionView.contentOffset.y / self.itemHeight;
-    
 }
+
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
@@ -58,38 +76,74 @@
 }
 
 
+
+
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSMutableArray *theLayoutAttributes = [[NSMutableArray alloc] init];
     
-    float minY = CGRectGetMinY(rect);
-    float maxY = CGRectGetMaxY(rect);
-    
-    int firstIndex = floorf(minY / self.itemHeight);
-    int lastIndex = floorf(maxY / self.itemHeight);
-    int activeIndex = (int)(firstIndex + lastIndex)/2;
-    
-    int maxVisibleOnScreen = 180 / self.AngularSpacing + 2;
-    
-    int firstItem = fmax(0, activeIndex - (int)(maxVisibleOnScreen/2) );
-    int lastItem = fmin( self.cellCount-1 , activeIndex + (int)(maxVisibleOnScreen/2) );
 
+    int maxVisiblesHalf = 180 / self.AngularSpacing;
+    
     //float firstItem = fmax(0 , floorf(minY / self.itemHeight) - (90/self.AngularSpacing) );
     //float lastItem = fmin( self.cellCount-1 , floorf(maxY / self.itemHeight) );
-
-    for( int i = firstItem; i <= lastItem; i++ ){
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
-        UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
-        [theLayoutAttributes addObject:theAttributes];
+    int lastIndex = -1;
+    for( int i = 0; i < self.cellCount; i++ ){
+        CGRect itemFrame = [self getRectForItem:i];
+        if(CGRectIntersectsRect(rect, itemFrame) && i > (-1*self.offset - maxVisiblesHalf) && i < (-1*self.offset + maxVisiblesHalf)){
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+            UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
+            [theLayoutAttributes addObject:theAttributes];
+            lastIndex = i;
+        }
     }
- 
-   
-    return [theLayoutAttributes copy];
+    
+    return theLayoutAttributes;
 }
+
+
+
+-(CGRect)getRectForItem:(int)item{
+    double newIndex = (item + self.offset);
+    float scaleFactor = fmax(0.6, 1 - fabs( newIndex *0.25));
+    float deltaX = self.cellSize.width/2;
+    float rX = cosf(self.AngularSpacing* newIndex *M_PI/180) * (self.dialRadius + (deltaX*scaleFactor));
+    float rY = sinf(self.AngularSpacing* newIndex *M_PI/180) * (self.dialRadius + (deltaX*scaleFactor));
+    float oX = -self.dialRadius + self.xOffset - (0.5 * self.cellSize.width);
+    float oY = self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y - (0.5 * self.cellSize.height);
+    CGRect itemFrame = CGRectMake(oX + rX, oY + rY, self.cellSize.width, self.cellSize.height);
+    return itemFrame;
+}
+
+
+
+-(CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
+    if(shouldSnap){
+        int index =(int)floor(proposedContentOffset.y / self.itemHeight);
+        int off = ((int)proposedContentOffset.y % (int)self.itemHeight);
+        
+        CGFloat targetY = (off > self.itemHeight * 0.5 && index <= self.cellCount)? (index+1) * self.itemHeight: index * self.itemHeight;
+        return CGPointMake(proposedContentOffset.x, targetY );
+    }else{
+        return proposedContentOffset;
+    }    
+}
+
+-(NSIndexPath *)targetIndexPathForInteractivelyMovingItem:(NSIndexPath *)previousIndexPath withPosition:(CGPoint)position{
+    NSLog(@"targetIndexPathForInteractivelyMovingItem");
+    return [NSIndexPath indexPathForItem:0 inSection:0];
+}
+
+
+
+
+
+
 
 
 - (CGSize)collectionViewContentSize
 {
+    
     const CGSize theSize = {
         .width = self.collectionView.bounds.size.width,
         .height = (self.cellCount-1) * self.itemHeight + self.collectionView.bounds.size.height,
@@ -104,20 +158,17 @@
     UICollectionViewLayoutAttributes *theAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
     theAttributes.size = self.cellSize;
+    
     float scaleFactor;
     float deltaX;
     CGAffineTransform translationT;
     CGAffineTransform rotationT = CGAffineTransformMakeRotation(self.AngularSpacing* newIndex *M_PI/180);
-    if(indexPath.item == 3){
-        NSLog(@"angle 3 :%f", self.AngularSpacing* newIndex);
-    }
-    
-    
+  
     if( self.wheelType == WHEELALIGNMENTLEFT){
         scaleFactor = fmax(0.6, 1 - fabs( newIndex *0.25));
-        deltaX = self.cellSize.width/2;
-        theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset  , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
-        translationT =CGAffineTransformMakeTranslation(self.dialRadius + (deltaX*scaleFactor) , 0);
+        CGRect newFrame = [self getRectForItem:(int)indexPath.item];
+        theAttributes.frame = CGRectMake(newFrame.origin.x , newFrame.origin.y, newFrame.size.width, newFrame.size.height);
+        translationT =CGAffineTransformMakeTranslation(0 , 0);
     }else  {
         scaleFactor = fmax(0.4, 1 - fabs( newIndex *0.50));
         deltaX =  self.collectionView.bounds.size.width/2;
@@ -129,17 +180,9 @@
     
     CGAffineTransform scaleT = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
     theAttributes.alpha = scaleFactor;
-    
-    /*
-    if( fabs(self.AngularSpacing* newIndex) > 90 ){
-        theAttributes.hidden = YES;
-    }else{
-        theAttributes.hidden = NO;
-    }
-     */
+    theAttributes.hidden = NO;
     
     theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
-    theAttributes.zIndex = indexPath.item;
     
     return(theAttributes);
 }
