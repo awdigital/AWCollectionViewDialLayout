@@ -26,18 +26,20 @@
 		71D04A3618D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A3518D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m */; };
 		71D04A4218D306A30077B38B /* AWCollectionViewDialLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */; };
 		71D04A4418D309C40077B38B /* dialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4318D309C40077B38B /* dialCell.xib */; };
-		71D04A4618D311190077B38B /* players.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* players.json */; };
-		71D04A4D18D3114C0077B38B /* carmelo_anthony.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4818D3114C0077B38B /* carmelo_anthony.png */; };
-		71D04A4E18D3114C0077B38B /* dwayne_wade.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4918D3114C0077B38B /* dwayne_wade.png */; };
-		71D04A4F18D3114C0077B38B /* kyrie_irving.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4A18D3114C0077B38B /* kyrie_irving.png */; };
-		71D04A5018D3114C0077B38B /* lebron_james.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4B18D3114C0077B38B /* lebron_james.png */; };
-		71D04A5118D3114C0077B38B /* paul_george.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4C18D3114C0077B38B /* paul_george.png */; };
-		71D04A5318D315980077B38B /* james_harden.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A5218D315980077B38B /* james_harden.png */; };
-		71DD0C6218D31DD900152D0C /* kevin_durant.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6118D31DD900152D0C /* kevin_durant.png */; };
+		71D04A4618D311190077B38B /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* photos.json */; };
 		71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6318D3540400152D0C /* iphone_settings_view.xib */; };
 		71DD223918D879A1005450FA /* dialCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223818D879A1005450FA /* dialCell2.xib */; };
 		71DD223C18D885F3005450FA /* awcollectionviewdiallayout_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223A18D885F3005450FA /* awcollectionviewdiallayout_1.jpg */; };
 		71DD223D18D885F3005450FA /* awcollectionviewdiallayout_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223B18D885F3005450FA /* awcollectionviewdiallayout_2.jpg */; };
+		E90944031CF83BD200049594 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90943FB1CF83BD200049594 /* beach.jpg */; };
+		E90944041CF83BD200049594 /* building.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90943FC1CF83BD200049594 /* building.jpg */; };
+		E90944051CF83BD200049594 /* hands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90943FD1CF83BD200049594 /* hands.jpg */; };
+		E90944061CF83BD200049594 /* indonesia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90943FE1CF83BD200049594 /* indonesia.jpg */; };
+		E90944071CF83BD200049594 /* montain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90943FF1CF83BD200049594 /* montain.jpg */; };
+		E90944081CF83BD200049594 /* nyc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90944001CF83BD200049594 /* nyc.jpg */; };
+		E90944091CF83BD200049594 /* rotterdam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90944011CF83BD200049594 /* rotterdam.jpg */; };
+		E909440A1CF83BD200049594 /* seattle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90944021CF83BD200049594 /* seattle.jpg */; };
+		E909440C1CF83C2B00049594 /* australia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E909440B1CF83C2B00049594 /* australia.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,18 +78,20 @@
 		71D04A4018D306A30077B38B /* AWCollectionViewDialLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCollectionViewDialLayout.h; sourceTree = "<group>"; };
 		71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayout.m; sourceTree = "<group>"; };
 		71D04A4318D309C40077B38B /* dialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell.xib; sourceTree = "<group>"; };
-		71D04A4518D311190077B38B /* players.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = players.json; sourceTree = "<group>"; };
-		71D04A4818D3114C0077B38B /* carmelo_anthony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carmelo_anthony.png; sourceTree = "<group>"; };
-		71D04A4918D3114C0077B38B /* dwayne_wade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dwayne_wade.png; sourceTree = "<group>"; };
-		71D04A4A18D3114C0077B38B /* kyrie_irving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kyrie_irving.png; sourceTree = "<group>"; };
-		71D04A4B18D3114C0077B38B /* lebron_james.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lebron_james.png; sourceTree = "<group>"; };
-		71D04A4C18D3114C0077B38B /* paul_george.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paul_george.png; sourceTree = "<group>"; };
-		71D04A5218D315980077B38B /* james_harden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = james_harden.png; sourceTree = "<group>"; };
-		71DD0C6118D31DD900152D0C /* kevin_durant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kevin_durant.png; sourceTree = "<group>"; };
+		71D04A4518D311190077B38B /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 		71DD0C6318D3540400152D0C /* iphone_settings_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphone_settings_view.xib; sourceTree = "<group>"; };
 		71DD223818D879A1005450FA /* dialCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell2.xib; sourceTree = "<group>"; };
 		71DD223A18D885F3005450FA /* awcollectionviewdiallayout_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awcollectionviewdiallayout_1.jpg; sourceTree = "<group>"; };
 		71DD223B18D885F3005450FA /* awcollectionviewdiallayout_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awcollectionviewdiallayout_2.jpg; sourceTree = "<group>"; };
+		E90943FB1CF83BD200049594 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
+		E90943FC1CF83BD200049594 /* building.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = building.jpg; sourceTree = "<group>"; };
+		E90943FD1CF83BD200049594 /* hands.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hands.jpg; sourceTree = "<group>"; };
+		E90943FE1CF83BD200049594 /* indonesia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = indonesia.jpg; sourceTree = "<group>"; };
+		E90943FF1CF83BD200049594 /* montain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = montain.jpg; sourceTree = "<group>"; };
+		E90944001CF83BD200049594 /* nyc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nyc.jpg; sourceTree = "<group>"; };
+		E90944011CF83BD200049594 /* rotterdam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotterdam.jpg; sourceTree = "<group>"; };
+		E90944021CF83BD200049594 /* seattle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seattle.jpg; sourceTree = "<group>"; };
+		E909440B1CF83C2B00049594 /* australia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = australia.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +161,7 @@
 				71D04A2018D3068F0077B38B /* ViewController.m */,
 				71D04A4318D309C40077B38B /* dialCell.xib */,
 				71DD223818D879A1005450FA /* dialCell2.xib */,
-				71D04A4518D311190077B38B /* players.json */,
+				71D04A4518D311190077B38B /* photos.json */,
 				71D04A0E18D3068F0077B38B /* Supporting Files */,
 				71DD0C6318D3540400152D0C /* iphone_settings_view.xib */,
 				7160264F1B302A750066AFA8 /* Images.xcassets */,
@@ -209,13 +213,15 @@
 			children = (
 				71DD223A18D885F3005450FA /* awcollectionviewdiallayout_1.jpg */,
 				71DD223B18D885F3005450FA /* awcollectionviewdiallayout_2.jpg */,
-				71D04A4818D3114C0077B38B /* carmelo_anthony.png */,
-				71D04A4918D3114C0077B38B /* dwayne_wade.png */,
-				71D04A5218D315980077B38B /* james_harden.png */,
-				71DD0C6118D31DD900152D0C /* kevin_durant.png */,
-				71D04A4A18D3114C0077B38B /* kyrie_irving.png */,
-				71D04A4B18D3114C0077B38B /* lebron_james.png */,
-				71D04A4C18D3114C0077B38B /* paul_george.png */,
+				E909440B1CF83C2B00049594 /* australia.jpg */,
+				E90943FB1CF83BD200049594 /* beach.jpg */,
+				E90943FC1CF83BD200049594 /* building.jpg */,
+				E90943FD1CF83BD200049594 /* hands.jpg */,
+				E90943FE1CF83BD200049594 /* indonesia.jpg */,
+				E90943FF1CF83BD200049594 /* montain.jpg */,
+				E90944001CF83BD200049594 /* nyc.jpg */,
+				E90944011CF83BD200049594 /* rotterdam.jpg */,
+				E90944021CF83BD200049594 /* seattle.jpg */,
 				716026531B302B4B0066AFA8 /* logo.png */,
 			);
 			name = Assets;
@@ -300,24 +306,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DD0C6218D31DD900152D0C /* kevin_durant.png in Resources */,
-				71D04A5118D3114C0077B38B /* paul_george.png in Resources */,
+				E90944031CF83BD200049594 /* beach.jpg in Resources */,
 				71DD223D18D885F3005450FA /* awcollectionviewdiallayout_2.jpg in Resources */,
 				71D04A1E18D3068F0077B38B /* Main_iPad.storyboard in Resources */,
-				71D04A4F18D3114C0077B38B /* kyrie_irving.png in Resources */,
+				E90944041CF83BD200049594 /* building.jpg in Resources */,
 				71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */,
-				71D04A5018D3114C0077B38B /* lebron_james.png in Resources */,
-				71D04A5318D315980077B38B /* james_harden.png in Resources */,
+				E90944071CF83BD200049594 /* montain.jpg in Resources */,
+				E90944051CF83BD200049594 /* hands.jpg in Resources */,
+				E909440C1CF83C2B00049594 /* australia.jpg in Resources */,
+				E90944061CF83BD200049594 /* indonesia.jpg in Resources */,
 				716026521B302B240066AFA8 /* splash.xib in Resources */,
 				71D04A4418D309C40077B38B /* dialCell.xib in Resources */,
-				71D04A4E18D3114C0077B38B /* dwayne_wade.png in Resources */,
-				71D04A4618D311190077B38B /* players.json in Resources */,
+				71D04A4618D311190077B38B /* photos.json in Resources */,
 				716026541B302B4B0066AFA8 /* logo.png in Resources */,
+				E90944091CF83BD200049594 /* rotterdam.jpg in Resources */,
+				E90944081CF83BD200049594 /* nyc.jpg in Resources */,
 				716026501B302A750066AFA8 /* Images.xcassets in Resources */,
 				71DD223918D879A1005450FA /* dialCell2.xib in Resources */,
+				E909440A1CF83BD200049594 /* seattle.jpg in Resources */,
 				71DD223C18D885F3005450FA /* awcollectionviewdiallayout_1.jpg in Resources */,
 				71D04A1B18D3068F0077B38B /* Main_iPhone.storyboard in Resources */,
-				71D04A4D18D3114C0077B38B /* carmelo_anthony.png in Resources */,
 				71D04A1218D3068F0077B38B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

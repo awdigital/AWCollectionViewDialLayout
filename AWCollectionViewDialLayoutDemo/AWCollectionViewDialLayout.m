@@ -13,6 +13,7 @@
 
 @implementation AWCollectionViewDialLayout{
     BOOL shouldSnap;
+    BOOL shouldFlip;
     CGPoint lastVelocity;
 }
 
@@ -24,6 +25,7 @@
     {
 		[self setup];
         shouldSnap = NO;
+        shouldFlip = NO;
     }
     return self;
 }
@@ -31,6 +33,9 @@
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOff{
     if ((self = [super init]) != NULL)
     {
+        shouldSnap = NO;
+        shouldFlip = NO;
+
         self.dialRadius = radius;
         self.cellSize = cell;
         self.itemSize = cell;
@@ -56,6 +61,9 @@
     shouldSnap = value;
 }
 
+-(void)setShoulFlip:(BOOL)value{
+    shouldFlip = value;
+}
 
 - (void)setup
 {
@@ -111,7 +119,15 @@
     float rY = sinf(self.AngularSpacing* newIndex *M_PI/180) * (self.dialRadius + (deltaX*scaleFactor));
     float oX = -self.dialRadius + self.xOffset - (0.5 * self.cellSize.width);
     float oY = self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y - (0.5 * self.cellSize.height);
+    
+   
+    if(shouldFlip){
+       oX = self.collectionView.frame.size.width + self.dialRadius - self.xOffset - (0.5 * self.cellSize.width);
+       rX *= -1;
+    }
+    
     CGRect itemFrame = CGRectMake(oX + rX, oY + rY, self.cellSize.width, self.cellSize.height);
+    
     return itemFrame;
 }
 
@@ -163,8 +179,13 @@
     float deltaX;
     CGAffineTransform translationT;
     CGAffineTransform rotationT = CGAffineTransformMakeRotation(self.AngularSpacing* newIndex *M_PI/180);
-  
+    
+    if(shouldFlip){
+        rotationT = CGAffineTransformMakeRotation(-self.AngularSpacing* newIndex *M_PI/180);
+    }
+    
     if( self.wheelType == WHEELALIGNMENTLEFT){
+        
         scaleFactor = fmax(0.6, 1 - fabs( newIndex *0.25));
         CGRect newFrame = [self getRectForItem:(int)indexPath.item];
         theAttributes.frame = CGRectMake(newFrame.origin.x , newFrame.origin.y, newFrame.size.width, newFrame.size.height);
@@ -172,8 +193,16 @@
     }else  {
         scaleFactor = fmax(0.4, 1 - fabs( newIndex *0.50));
         deltaX =  self.collectionView.bounds.size.width/2;
-        theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
-        translationT =CGAffineTransformMakeTranslation(self.dialRadius  + ((1 - scaleFactor) * -30) , 0);
+        
+        if(shouldFlip){
+            theAttributes.center = CGPointMake( self.collectionView.frame.size.width + self.dialRadius - self.xOffset , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
+            translationT =CGAffineTransformMakeTranslation( -1 * (self.dialRadius  + ((1 - scaleFactor) * -30)) , 0);
+            NSLog(@"should Flip ");
+        }else{
+            theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
+            translationT =CGAffineTransformMakeTranslation(self.dialRadius  + ((1 - scaleFactor) * -30) , 0);
+            NSLog(@"should not Flip ");
+        }
     }
     
     

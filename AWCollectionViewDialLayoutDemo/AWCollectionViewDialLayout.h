@@ -33,4 +33,5 @@ enum WheelAlignmentType : NSInteger {
 
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOffset;
 -(void)setShoulSnap:(BOOL)value;
+-(void)setShoulFlip:(BOOL)value;
 @end

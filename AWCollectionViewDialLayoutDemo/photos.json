@@ -1,0 +1,164 @@
+[
+ {
+    "name": "New York, United States",
+    "picture": "building.jpg",
+    "url": "https://unsplash.com/photos/TZCehSn-T-o",
+    "color": "#c39b77"
+ },
+ {
+    "name": "Yuriria, Mexico",
+    "picture": "hands.jpg",
+    "url": "https://unsplash.com/photos/zFnk_bTLApo",
+    "color": "#36cca7"
+ },
+ {
+    "name": "Big Sur, United States",
+    "picture": "beach.jpg",
+    "url": "https://unsplash.com/photos/sYegwYtIqJg",
+    "color": "#30b4da"
+ },
+ {
+    "name": "Penrith, United Kingdom",
+    "picture": "montain.jpg",
+    "url": "https://unsplash.com/photos/v1bP6olgtx0",
+    "color": "#bbbac2"
+ } ,
+ {
+ "name": "New York, USA",
+ "picture": "nyc.jpg",
+ "url": "https://unsplash.com/photos/bITjK6W2Alw",
+ "color": "#c1a78c"
+ },
+ {
+ "name": "Indonesia",
+ "picture": "indonesia.jpg",
+ "url": "https://unsplash.com/photos/fwsvUxNgLRs",
+ "color": "#abc1d9"
+ },
+ {
+ "name": "Wye River, Australia",
+ "picture": "australia.jpg",
+ "url": "https://unsplash.com/photos/5Qwz2KyfIBE",
+ "color": "#e6b421"
+ },
+ {
+ "name": "Rotterdam, Netherlands",
+ "picture": "rotterdam.jpg",
+ "url": "https://unsplash.com/photos/sai-x7brics",
+ "color": "#7fb774"
+ },
+ {
+ "name": "Seattle, United States",
+ "picture": "seattle.jpg",
+ "url": "https://unsplash.com/photos/bIQiMWxX_WU",
+ "color": "#aa8d6b"
+ },
+ {
+ "name": "New York, United States",
+ "picture": "building.jpg",
+ "url": "https://unsplash.com/photos/TZCehSn-T-o",
+ "color": "#c39b77"
+ },
+ {
+ "name": "Yuriria, Mexico",
+ "picture": "hands.jpg",
+ "url": "https://unsplash.com/photos/zFnk_bTLApo",
+ "color": "#36cca7"
+ },
+ {
+ "name": "Big Sur, United States",
+ "picture": "beach.jpg",
+ "url": "https://unsplash.com/photos/sYegwYtIqJg",
+ "color": "#30b4da"
+ },
+ {
+ "name": "Penrith, United Kingdom",
+ "picture": "montain.jpg",
+ "url": "https://unsplash.com/photos/v1bP6olgtx0",
+ "color": "#bbbac2"
+ } ,
+ {
+ "name": "New York, USA",
+ "picture": "nyc.jpg",
+ "url": "https://unsplash.com/photos/bITjK6W2Alw",
+ "color": "#c1a78c"
+ },
+ {
+ "name": "Indonesia",
+ "picture": "indonesia.jpg",
+ "url": "https://unsplash.com/photos/fwsvUxNgLRs",
+ "color": "#abc1d9"
+ },
+ {
+ "name": "Wye River, Australia",
+ "picture": "australia.jpg",
+ "url": "https://unsplash.com/photos/5Qwz2KyfIBE",
+ "color": "#e6b421"
+ },
+ {
+ "name": "Rotterdam, Netherlands",
+ "picture": "rotterdam.jpg",
+ "url": "https://unsplash.com/photos/sai-x7brics",
+ "color": "#7fb774"
+ },
+ {
+ "name": "Seattle, United States",
+ "picture": "seattle.jpg",
+ "url": "https://unsplash.com/photos/bIQiMWxX_WU",
+ "color": "#aa8d6b"
+ },
+ {
+ "name": "New York, United States",
+ "picture": "building.jpg",
+ "url": "https://unsplash.com/photos/TZCehSn-T-o",
+ "color": "#c39b77"
+ },
+ {
+ "name": "Yuriria, Mexico",
+ "picture": "hands.jpg",
+ "url": "https://unsplash.com/photos/zFnk_bTLApo",
+ "color": "#36cca7"
+ },
+ {
+ "name": "Big Sur, United States",
+ "picture": "beach.jpg",
+ "url": "https://unsplash.com/photos/sYegwYtIqJg",
+ "color": "#30b4da"
+ },
+ {
+ "name": "Penrith, United Kingdom",
+ "picture": "montain.jpg",
+ "url": "https://unsplash.com/photos/v1bP6olgtx0",
+ "color": "#bbbac2"
+ } ,
+ {
+ "name": "New York, USA",
+ "picture": "nyc.jpg",
+ "url": "https://unsplash.com/photos/bITjK6W2Alw",
+ "color": "#c1a78c"
+ },
+ {
+ "name": "Indonesia",
+ "picture": "indonesia.jpg",
+ "url": "https://unsplash.com/photos/fwsvUxNgLRs",
+ "color": "#abc1d9"
+ },
+ {
+ "name": "Wye River, Australia",
+ "picture": "australia.jpg",
+ "url": "https://unsplash.com/photos/5Qwz2KyfIBE",
+ "color": "#e6b421"
+ },
+ {
+ "name": "Rotterdam, Netherlands",
+ "picture": "rotterdam.jpg",
+ "url": "https://unsplash.com/photos/sai-x7brics",
+ "color": "#7fb774"
+ },
+ {
+ "name": "Seattle, United States",
+ "picture": "seattle.jpg",
+ "url": "https://unsplash.com/photos/bIQiMWxX_WU",
+ "color": "#aa8d6b"
+ }
+]

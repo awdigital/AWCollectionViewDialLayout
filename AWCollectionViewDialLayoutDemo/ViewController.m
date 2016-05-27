@@ -48,13 +48,13 @@ static NSString *cellId2 = @"cellId2";
     
     
     NSError *error;
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"players" ofType:@"json"];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"photos" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:NULL];
     NSLog(@"jsonString:%@",jsonString);
     items = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     settingsView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-44)];
-    [settingsView setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
+    [settingsView setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.4]];
     [self.view addSubview:settingsView];
     [self buildSettings];
     
@@ -76,7 +76,7 @@ static NSString *cellId2 = @"cellId2";
     
     [editBtn setTarget:self];
     [editBtn setAction:@selector(toggleSettingsView)];
-    
+  
     [self switchExample];
     
 }
@@ -113,8 +113,9 @@ static NSString *cellId2 = @"cellId2";
     CGFloat radius = 0 ,angularSpacing  = 0, xOffset = 0;
     
     if(type == 0){
-        [dialLayout setCellSize:CGSizeMake(240, 100)];
-        [dialLayout setWheelType:WHEELALIGNMENTLEFT];
+        [dialLayout setCellSize:CGSizeMake(340, 100)];
+        [dialLayout setWheelType:WHEELALIGNMENTLEFT];        
+        [dialLayout setShoulFlip:NO];
         
         radius = 300;
         angularSpacing = 18;
@@ -122,6 +123,7 @@ static NSString *cellId2 = @"cellId2";
     }else if(type == 1){
         [dialLayout setCellSize:CGSizeMake(260, 50)];
         [dialLayout setWheelType:WHEELALIGNMENTCENTER];
+        [dialLayout setShoulFlip:YES];
         
         radius = 320;
         angularSpacing = 5;
@@ -213,15 +215,10 @@ static NSString *cellId2 = @"cellId2";
     [nameLabel setText:playerName];
     
     
-    NSString *hexColor = [item valueForKey:@"team-color"];
+    NSString *hexColor = [item valueForKey:@"color"];
     
     
     if(type == 0){
-        UIView *borderView = [cell viewWithTag:102];
-        
-        borderView.layer.borderWidth = 1;
-        borderView.layer.borderColor = [self colorFromHex:hexColor].CGColor;
-        
         NSString *imgURL = [item valueForKey:@"picture"];
         UIImageView *imgView = (UIImageView*)[cell viewWithTag:100];
         [imgView setImage:nil];
@@ -251,8 +248,9 @@ static NSString *cellId2 = @"cellId2";
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    //[self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
-    [self.collectionView setContentOffset:CGPointMake(0, cell_height * 2) animated:YES];
+    NSDictionary *item = [self.items objectAtIndex:indexPath.item];
+    NSString *link = [item valueForKey:@"url"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
 }
 
 
