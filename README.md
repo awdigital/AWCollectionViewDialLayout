@@ -5,10 +5,13 @@ UICollectionViewLayout for displaying cells in a semi-circle with a nice fish ey
 
 Very handy for quickly browsing items with your left thumb without having some of the content hidden behind your finger while you scroll.
 
+![Demo Gif](http://www.antoinewette.com/github/dialcollectionview.gif)
+
+
 * * *
-Usage:
-* * *
-```
+####Initialize Layout
+
+```Objective-C
 // Radius : The radius of your circle
 // Angular spacing: Angle between items (deg)
 // Cell Size: Size of your cell
@@ -19,14 +22,17 @@ AWCollectionViewDialLayout *dialLayout = [[AWCollectionViewDialLayout alloc] ini
 ```
 
 * * *
-Screenshots:
-* * *
-![Screenshot 1](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_1.jpg)
+####Enable Snap Mode
 
-![Screenshot 2](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_2.jpg)
-
+```Objective-C
+[dialLayout setShoulSnap:YES];
+```
 
 * * *
-Video
-* * *
-[![ScreenShot](http://antoinewette.com/github/vimeo_screenshot.jpg)](https://vimeo.com/89403786)
+####Programmatically scroll to item at index
+
+Use the **cell_height** variable you used to initialize the CollectionViewLayout and multiply it by the IndexPath.item 
+```Objective-C
+// Scroll to item at indexPath (0,2)
+ [self.collectionView setContentOffset:CGPointMake(0, cell_height * 2) animated:YES];
+```
