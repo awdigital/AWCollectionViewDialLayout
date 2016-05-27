@@ -25,7 +25,7 @@ AWCollectionViewDialLayout *dialLayout = [[AWCollectionViewDialLayout alloc] ini
 ####Enable Snap Mode
 
 ```Objective-C
-[dialLayout setShoulSnap:YES];
+[dialLayout setShouldSnap:YES];
 ```
 
 * * *
@@ -42,7 +42,7 @@ Use the **cell_height** variable you used to initialize the CollectionViewLayout
 You can set the flip option to YES if you want to display your items on the right side of the CollectionView.
 
 ```Objective-C
-[dialLayout setShoulFlip:YES];
+[dialLayout setShouldFlip:YES];
 ```
 
 * * *
