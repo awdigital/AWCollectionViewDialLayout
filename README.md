@@ -5,7 +5,7 @@ UICollectionViewLayout for displaying cells in a semi-circle with a nice fish ey
 
 Very handy for quickly browsing items with your left thumb without having some of the content hidden behind your finger while you scroll.
 
-![Demo Gif](http://www.antoinewette.com/github/dialcollectionview.gif)
+![Demo Gif](http://www.antoinewette.com/github/awdiallayout.gif)
 
 
 * * *
@@ -36,3 +36,13 @@ Use the **cell_height** variable you used to initialize the CollectionViewLayout
 // Scroll to item at indexPath (0,2)
  [self.collectionView setContentOffset:CGPointMake(0, cell_height * 2) animated:YES];
 ```
+* * *
+#### Flip Horizontally
+
+You can set the flip option to YES if you want to display your items on the right side of the CollectionView.
+
+```Objective-C
+[dialLayout setShoulFlip:YES];
+```
+
+* * *
