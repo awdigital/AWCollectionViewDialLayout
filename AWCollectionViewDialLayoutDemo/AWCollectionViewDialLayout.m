@@ -57,11 +57,11 @@
     return self;
 }
 
--(void)setShoulSnap:(BOOL)value{
+-(void)setShouldSnap:(BOOL)value{
     shouldSnap = value;
 }
 
--(void)setShoulFlip:(BOOL)value{
+-(void)setShouldFlip:(BOOL)value{
     shouldFlip = value;
 }
 

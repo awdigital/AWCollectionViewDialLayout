@@ -70,7 +70,7 @@ static NSString *cellId2 = @"cellId2";
     
         
     dialLayout = [[AWCollectionViewDialLayout alloc] initWithRadius:radius andAngularSpacing:angularSpacing andCellSize:CGSizeMake(cell_width, cell_height) andAlignment:WHEELALIGNMENTCENTER andItemHeight:cell_height andXOffset:xOffset];
-    [dialLayout setShoulSnap:YES];
+    [dialLayout setShouldSnap:YES];
     [collectionView setCollectionViewLayout:dialLayout];
     dialLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
@@ -115,7 +115,7 @@ static NSString *cellId2 = @"cellId2";
     if(type == 0){
         [dialLayout setCellSize:CGSizeMake(340, 100)];
         [dialLayout setWheelType:WHEELALIGNMENTLEFT];        
-        [dialLayout setShoulFlip:NO];
+        [dialLayout setShouldFlip:NO];
         
         radius = 300;
         angularSpacing = 18;
@@ -123,7 +123,7 @@ static NSString *cellId2 = @"cellId2";
     }else if(type == 1){
         [dialLayout setCellSize:CGSizeMake(260, 50)];
         [dialLayout setWheelType:WHEELALIGNMENTCENTER];
-        [dialLayout setShoulFlip:YES];
+        [dialLayout setShouldFlip:YES];
         
         radius = 320;
         angularSpacing = 5;
