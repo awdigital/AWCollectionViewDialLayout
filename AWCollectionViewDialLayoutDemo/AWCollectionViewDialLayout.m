@@ -183,6 +183,14 @@
     if(shouldFlip){
         rotationT = CGAffineTransformMakeRotation(-self.AngularSpacing* newIndex *M_PI/180);
     }
+
+    CGFloat minRange = -self.AngularSpacing / 2.0;
+    CGFloat maxRange = self.AngularSpacing / 2.0;
+    CGFloat currentAngle = self.AngularSpacing*newIndex;
+    
+    if ((currentAngle > minRange) && (currentAngle < maxRange)) {
+        self.selectedItem = indexPath.item;
+    }
     
     if( self.wheelType == WHEELALIGNMENTLEFT){
         

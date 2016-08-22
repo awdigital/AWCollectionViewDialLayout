@@ -29,6 +29,7 @@ enum WheelAlignmentType : NSInteger {
 @property (readwrite, nonatomic, assign) CGFloat AngularSpacing;
 @property (readwrite, nonatomic, assign) CGFloat dialRadius;
 @property (readonly, nonatomic, strong) NSIndexPath *currentIndexPath;
+@property (readwrite, nonatomic, assign) int selectedItem;
 
 
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOffset;
